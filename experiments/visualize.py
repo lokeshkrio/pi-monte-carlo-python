@@ -38,7 +38,7 @@ def save_graph(x, y, title, xlabel, ylabel, filename, reference=None):
     print(f"Saved: {filename}")
 
 
-def plot_sample_points(number_of_points: int = 10000, seed: int | None = 42):
+def plot_sample_points(number_of_points: int = 10000, seed: int | None = 72):
     estimator = MonteCarloPi(seed=seed)
 
     result = estimator.estimate(number_of_points, return_points=True)
@@ -92,7 +92,7 @@ def plot_sample_points(number_of_points: int = 10000, seed: int | None = 42):
     print("Saved: sample_points.png")
 
 
-def run_visualization(samples, repetitions=5, seed: int | None = 118, plot_points=10000):
+def run_visualization(samples, repetitions=5, seed: int | None = 72, plot_points=10000):
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -186,7 +186,7 @@ def main():
 
     parser.add_argument("-r", "--repetitions", type=int, default=5)
 
-    parser.add_argument("-s", "--seed", type=int, default=118)
+    parser.add_argument("-s", "--seed", type=int, default=72)
 
     parser.add_argument(
         "--plot-points",

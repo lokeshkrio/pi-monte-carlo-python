@@ -13,7 +13,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 from src.estimator import MonteCarloPi
 
 
-def benchmark(sample_sizes, repetitions=5, seed: int | None = 118):
+def benchmark(sample_sizes, repetitions=5, seed: int | None = 72):
     if repetitions <= 0:
         raise ValueError("Repetitions must be positive.")
 
@@ -154,7 +154,7 @@ def main():
         "-s",
         "--seed",
         type=int,
-        default=118,
+        default=72,
         help="Random seed (negative for random seeds)",
     )
 
